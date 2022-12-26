@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import React from "react";
+import routeArray from "./Routes";
 
 function App() {
+    const router = createBrowserRouter(routeArray)
     return (
-        <div className="App">
-            hello world!!!
-        </div>
-    );
+        <RouterProvider router={router}/>
+        );
 }
 
 export default App;
