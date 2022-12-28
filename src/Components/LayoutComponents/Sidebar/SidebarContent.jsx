@@ -11,7 +11,7 @@ interface LinkItemProps {
 }
 
 const LinkItems: Array<LinkItemProps> = [
-    {name: 'خانه', icon: FiHome, route: ''},
+    {name: 'خانه', icon: FiHome, route: '/simple-dashboard'},
     {name: 'فرم', icon: FiTrendingUp, route: 'forms'},
     {name: 'جدول', icon: FiCompass, route: 'tables'},
     {name: 'نمودار', icon: FiStar, route: 'charts'},
@@ -39,13 +39,9 @@ function SidebarContent({onClose, ...rest}: SidebarProps) {
                 <CloseButton display={{base: 'flex', md: 'none'}} onClick={onClose}/>
             </Flex>
             {LinkItems.map((link) => (
-                <NavLink href="#" key={link.name}>
-                    <Link to={link.route} id={link.name}>
-                        <NavItem icon={link.icon}>
-                            {link.name}
-                        </NavItem>
-                    </Link>
-                </NavLink>
+                <NavItem icon={link.icon} to={link.route} key={link.route}>
+                    {link.name}
+                </NavItem>
             ))}
         </Box>
     );

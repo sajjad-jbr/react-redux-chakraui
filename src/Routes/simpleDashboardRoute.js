@@ -1,5 +1,6 @@
 import SimpleDashboardLayout from '../Layouts/SimpleDashboardLayout'
 import MainPage from "../Pages/SimpleDashBoard/MainPage/MainPage";
+import FormPage from "../Pages/FormPage/FormPage";
 
 export default [
     {
@@ -11,7 +12,7 @@ export default [
             },
             {
                 path: 'forms',
-                element: <SimpleDashboardLayout renderElement={() => <MainPage/>}/>
+                element: <SimpleDashboardLayout renderElement={() => <FormPage/>}/>
             },
             {
                 path: 'tables',
@@ -24,7 +25,7 @@ export default [
             {
                 path: 'components',
                 element: <SimpleDashboardLayout renderElement={() => <MainPage/>}/>
-            },
+            }
         ]
     }
 ]
