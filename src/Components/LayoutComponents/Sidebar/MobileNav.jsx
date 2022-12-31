@@ -14,10 +14,12 @@ function MobileNav({ onOpen, ...rest }: MobileProps) {
             height="20"
             alignItems="center"
             bg={useColorModeValue('white', 'gray.900')}
-            borderBottomWidth="1px"
-            borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
+            // borderBottomWidth="1px"
+            // borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
             justifyContent="flex-start"
             {...rest}>
+
+
             <IconButton
                 variant="outline"
                 onClick={onOpen}
@@ -25,9 +27,6 @@ function MobileNav({ onOpen, ...rest }: MobileProps) {
                 icon={<FiMenu />}
             />
 
-            <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-                Logo
-            </Text>
         </Flex>
     );
 }

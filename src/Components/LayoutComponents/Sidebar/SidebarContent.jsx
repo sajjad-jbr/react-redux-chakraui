@@ -26,8 +26,8 @@ function SidebarContent({onClose, ...rest}: SidebarProps) {
     return (
         <Box
             bg={useColorModeValue('white', 'gray.900')}
-            borderRight="1px"
-            borderRightColor={useColorModeValue('gray.200', 'gray.700')}
+            borderLeftWidth="1px"
+            borderLeftColor={useColorModeValue('gray.200', 'gray.700')}
             w={{base: 'full', md: 60}}
             pos="fixed"
             h="full"
