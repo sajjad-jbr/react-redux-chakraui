@@ -27,7 +27,7 @@ function DashboardNavBar(props) {
         <Flex
             borderBottomWidth="1px"
             borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
-            justifyContent='flex-end' w='100vw' minH='80px'>
+            justifyContent='flex-end' w='100%' minH='81px'>
             <Drawer
                 autoFocus={false}
                 isOpen={isOpen}
