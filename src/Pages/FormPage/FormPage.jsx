@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormik} from 'formik';
 import Form from "../../Components/CustomComponents/Form/Form";
+import {Box} from "@chakra-ui/react";
 
 function FormPage(props) {
     const initialValues = {}
@@ -13,12 +14,9 @@ function FormPage(props) {
         onSubmit: onSubmitForm
     })
     return (
-        <div>
-            forms
-            <Form>
-
-            </Form>
-        </div>
+        <Box h='100%' w='100%' p={4} color='black'>
+            form page
+        </Box>
     );
 }
 

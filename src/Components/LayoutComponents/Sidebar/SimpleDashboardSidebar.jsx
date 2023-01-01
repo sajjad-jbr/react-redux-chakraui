@@ -1,19 +1,20 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import SidebarContent from './SidebarContent'
-import {Box, Flex, useColorModeValue, useDisclosure,} from '@chakra-ui/react';
+import {Flex, useColorModeValue, useDisclosure,} from '@chakra-ui/react';
 
 
-export default function SimpleDashboardSidebar({children}: { children: ReactNode }) {
+export default function SimpleDashboardSidebar({width = {}}) {
     const {isOpen, onOpen, onClose} = useDisclosure();
     return (
-        <Box
+        <Flex
             minH="100vh"
+            width={width}
             bg={useColorModeValue('gray.100', 'gray.900')}>
             <SidebarContent
                 onClose={() => onClose}
                 display={{base: 'none', md: 'block'}}
             />
-        </Box>
+        </Flex>
     );
 }
 
