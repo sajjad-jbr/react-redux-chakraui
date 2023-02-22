@@ -1,5 +1,6 @@
 import React from 'react';
 import {Checkbox, CheckboxGroup, Stack} from '@chakra-ui/react'
+import FieldsetComponent from "../../Components/CustomComponents/FieldsetComponent";
 
 function CheckBoxSection(props) {
     const [checkedItems, setCheckedItems] = React.useState([false, false])
@@ -9,9 +10,7 @@ function CheckBoxSection(props) {
 
     return (
         <>
-            <fieldset style={{width: '100%', borderRadius: 10, border: '1px solid gray', padding: '10px'}} >
-                <legend>Check box</legend>
-
+            <FieldsetComponent title="Checkboxes">
                 <Stack spacing={5} direction='row'>
                     <Checkbox isDisabled>Checkbox</Checkbox>
                     <Checkbox isDisabled defaultChecked>
@@ -77,7 +76,7 @@ function CheckBoxSection(props) {
                         <Checkbox value='kakashi'>Kakashi</Checkbox>
                     </Stack>
                 </CheckboxGroup>
-            </fieldset>
+            </FieldsetComponent>
         </>
 
     );
