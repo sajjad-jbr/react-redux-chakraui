@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import {useFormik} from 'formik';
-import {Box, Button, FormControl, FormErrorMessage, FormLabel, HStack, Input, VStack} from "@chakra-ui/react";
+import {Box, Button, VStack} from "@chakra-ui/react";
 import * as Yup from 'yup';
-import InputComponent from "../../Components/CustomComponents/InputComponent";
-import CheckBoxSection from "../../Components/CustomComponents/Form/CheckBoxSection";
+import CheckBoxSection from "./CheckBoxSection";
+import InputSection from "./InputSection";
+import EditableSection from "./EditableSection";
+import IconButtonSection from "./IconButtonSection";
+import NumberInputSection from "./NumberInputSection";
 
 function FormPage(props) {
     const [isLoading, setIsLoading] = useState(false);
@@ -33,49 +36,20 @@ function FormPage(props) {
                 e.preventDefault();
                 formik.handleSubmit()
             }}>
-
                 <VStack w="full">
-                    <HStack spacing="auto" w="full">
-                        <Box w='32%'>
-                            <InputComponent
-                                id="firstName"
-                                w="30%"
-                                name="firstName"
-                                label="First Name"
-                                formik={formik}
-                                onChange={formik.getFieldProps('firstName').onChange}
-                                onBlur={formik.getFieldProps('firstName').onBlur}/>
-                        </Box>
-                        <Box w='32%'>
-                            <InputComponent
-                                id="middleName"
-                                w="30%"
-                                name="middleName"
-                                label="Middle Name"
-                                formik={formik}
-                                onChange={formik.getFieldProps('middleName').onChange}
-                                onBlur={formik.getFieldProps('middleName').onBlur}/>
-                        </Box>
-                        <Box w='32%'>
-                            <InputComponent
-                                id="lastName"
-                                w="30%"
-                                name="lastName"
-                                label="Last Name"
-                                formik={formik}
-                                onChange={formik.getFieldProps('lastName').onChange}
-                                onBlur={formik.getFieldProps('lastName').onBlur}/>
-                        </Box>
+                    <InputSection formik={formik}/>
 
+                    <CheckBoxSection/>
 
-                    </HStack>
+                    <EditableSection/>
 
-                    <CheckBoxSection />
+                    <IconButtonSection />
+
+                    <NumberInputSection />
 
                     <Button w="320px" isLoading={isLoading} type="submit" colorScheme="purple">
                         Submit
                     </Button>
-
                 </VStack>
 
             </form>
