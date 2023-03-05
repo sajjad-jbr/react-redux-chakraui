@@ -7,6 +7,13 @@ import InputSection from "./InputSection";
 import EditableSection from "./EditableSection";
 import IconButtonSection from "./IconButtonSection";
 import NumberInputSection from "./NumberInputSection";
+import PinInputSection from "./PinInputSection";
+import RadioButtonSection from "./RadioButtonSection";
+import RangeSliderSection from "./RangeSliderSection";
+import SelectSection from "./SelectSection";
+import SliderSection from "./SliderSection";
+import SwitchSection from "./SwitchSection";
+import TextareaSection from "./TextareaSection";
 
 function FormPage(props) {
     const [isLoading, setIsLoading] = useState(false);
@@ -46,6 +53,21 @@ function FormPage(props) {
                     <IconButtonSection />
 
                     <NumberInputSection />
+
+                    <PinInputSection/>
+
+                    <RadioButtonSection/>
+
+                    <RangeSliderSection/>
+
+                    <SelectSection/>
+
+                    <SliderSection/>
+
+                    <SwitchSection />
+
+                    <TextareaSection/>
+
 
                     <Button w="320px" isLoading={isLoading} type="submit" colorScheme="purple">
                         Submit
